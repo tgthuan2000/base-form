@@ -1,0 +1,89 @@
+$color1: #17c191;
+$color2: #3f4254;
+$box-shadow-1: 0 3px 20px 0 rgba(113, 106, 202, 0.17);
+// mixxin
+@mixin border-radius($val) {
+    border-radius: $val;
+    -webkit-border-radius: $val;
+    -moz-border-radius: $val;
+    -ms-border-radius: $val;
+    -o-border-radius: $val;
+}
+
+.react-select {
+    //for ReactSelect
+    > div[class*='-control'] {
+        height: 28px;
+        min-height: 28px;
+        border: 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.42) !important;
+        @include border-radius(0);
+        box-shadow: none;
+        &:focus {
+            border-bottom: 2px solid $color1;
+        }
+        > div {
+            padding-left: 0;
+        }
+        [class*='-indicatorSeparator'] {
+            display: none;
+        }
+        [class*='-indicatorContainer'] {
+            padding-right: 0;
+            svg {
+                width: 15px;
+                color: #3f4254;
+            }
+        }
+    }
+    &.multi-select > div[class*='-control'] {
+        height: auto;
+    }
+    > div[class*='-control']:hover {
+        cursor: text;
+        border-bottom: 2px solid black !important;
+    }
+    > div[class*='-menu'] {
+        border-radius: 6px;
+        box-shadow: 0px 2px 1px -1px rgb(0 0 0 / 20%), 0px 1px 1px 0px rgb(0 0 0 / 14%),
+            0px 1px 3px 0px rgb(0 0 0 / 12%);
+    }
+}
+
+// input line style
+.input-line {
+    .form-control {
+        padding-left: 0;
+        border: 0;
+        border-bottom: 1px solid #ccc;
+        @include border-radius(0);
+        &:focus {
+            border-bottom: 2px solid $color1;
+        }
+        &.is-valid {
+            border-color: #1bc5bd;
+        }
+    }
+    label {
+        font-size: 10px !important;
+        color: rgba(0, 0, 0, 0.54) !important;
+        margin-bottom: 0;
+    }
+    .feedback {
+        margin-top: 4px;
+        font-size: 0.75rem;
+        color: rgba(0, 0, 0, 0.54);
+    }
+    select {
+        background: #fff !important;
+        border-color: #ccc !important;
+    }
+
+    .valid-message {
+        position: absolute;
+        background: #fff;
+        bottom: 0;
+        width: 100%;
+        line-height: 1;
+    }
+}
