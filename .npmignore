@@ -1,7 +1,5 @@
 ## the src folder
-src
-.babelrc
-rollup.config.js
+# src
 ## node modules folder
 node_modules
 ## incase you have a git repositiory initiated
