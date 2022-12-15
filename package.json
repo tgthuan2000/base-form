@@ -1,6 +1,6 @@
 {
     "name": "@tgthuan/mui-base-form",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "base form for mui (v5)",
     "main": "dist/index.cjs.js",
     "scripts": {
